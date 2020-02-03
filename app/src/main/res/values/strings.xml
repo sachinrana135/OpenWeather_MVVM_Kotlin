@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">OpenWeather App</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="clear_city">Clear city</string>
+    <string name="submit_city">Submit city</string>
+    <string name="degree_celsius_symbol">°C</string>
+    <string name="meter_per_second">m/s</string>
+    <string name="text_multiple_cities">Multiple Cities</string>
+    <string name="text_single_city">My City</string>
+    <string name="text_max_temp">Max Temp :</string>
+    <string name="text_view_weather">View Weather Of</string>
+    <string name="text_min_temp">Min Temp :</string>
+    <string name="text_wind_speed">Wind Speed :</string>
+    <string name="title_select_city">Select City</string>
+    <string name="title_multiple_city_weather">Multiple City Weather</string>
+    <string name="title_weather_forecast">Weather Forecast</string>
+    <string name="error_max_city_selection">Maximum 7 cities can be selected</string>
+    <string name="error_min_city_selection">Minimum 3 cities should be selected</string>
+    <string name="error_duplicate_city">Same city can not be selected twice</string>
+    <string name="text_enter_city">Enter Indian city here</string>
+</resources>
