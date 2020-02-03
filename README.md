@@ -1,3 +1,3 @@
 # OpenWeather_MVVM_Kotlin
 
-![Demo](Demo.gif =240x427)
+<img src="https://github.com/sachinrana135/OpenWeather_MVVM_Kotlin/blob/master/Demo.gif" width="240" height="427">
