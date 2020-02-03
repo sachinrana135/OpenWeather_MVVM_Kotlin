@@ -2,6 +2,7 @@
 
 
 The app accepts multiple city names from the user(comma Separated) and display following attributes using api’s to fetch current temperatures. User should enter minimum 3 cities and max 7 cities. https://openweathermap.org/current
+
 ✔️ Temperature (Min and Max), 
 ✔️ Weather (description), 
 ✔️ Wind Speed  
