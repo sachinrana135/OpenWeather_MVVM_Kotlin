@@ -12,7 +12,7 @@ import retrofit2.Response
 
 open class GetWeatherRepository(private val context: Context) {
 
-    fun getMultipleCityWeatherInfo(
+    open fun getMultipleCityWeatherInfo(
         cityIds: String,
         callback: RequestCompleteListener<MultipleCityWeather>
     ) {
@@ -40,7 +40,7 @@ open class GetWeatherRepository(private val context: Context) {
         })
     }
 
-    fun getWeatherByLatLong(
+    open fun getWeatherByLatLong(
         lat: String,
         long: String,
         callback: RequestCompleteListener<MultipleCityWeather>

@@ -1,13 +1,15 @@
 package com.sachinrana.openweatherapp.viewmodel
 
 import android.app.Application
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.hellohasan.weatherappmvvm.features.weather_info_show.model.data_class.City
 import com.sachinrana.openweatherapp.network.CityRepository
 import org.junit.Assert.assertTrue
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import org.mockito.Mock
-import org.mockito.Mockito.`when`
+import org.mockito.Mockito
 import org.mockito.Mockito.mock
 import org.mockito.MockitoAnnotations
 
@@ -19,6 +21,9 @@ class CitySelectionViewModelTest {
     lateinit var mockApplication: Application
 
     lateinit var mockCityRepository: CityRepository
+
+    @get:Rule
+    val rule = InstantTaskExecutorRule()
 
 
     @Before
@@ -36,7 +41,7 @@ class CitySelectionViewModelTest {
         var mockList = mutableListOf(city)
 
 
-        `when`(mockCityRepository.getCityList()).thenReturn(mockList)
+        Mockito.`when`(mockCityRepository.getCityList()).thenReturn(mockList)
 
         citySelectionViewModel.getCityList(searchText, mockCityRepository)
 

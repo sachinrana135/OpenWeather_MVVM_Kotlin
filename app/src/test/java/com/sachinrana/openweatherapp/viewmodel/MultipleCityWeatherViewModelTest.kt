@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.hellohasan.weatherappmvvm.features.weather_info_show.model.data_class.City
+import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.capture
 import com.sachinrana.openweatherapp.common.RequestCompleteListener
 import com.sachinrana.openweatherapp.model.MultipleCityWeather
@@ -45,14 +46,13 @@ class MultipleCityWeatherViewModelTest {
         val multipleCityWeather = MultipleCityWeather(3, listOf(), City())
         multipleCityWeatherViewModel.getWeatherInfo(cityIds, mockGetWeatherRepository)
 
-
         assertTrue(multipleCityWeatherViewModel.progressBarLiveData.value!!)
         Mockito.verify(mockGetWeatherRepository)
-            .getMultipleCityWeatherInfo(cityIds, capture(captor))
+            .getMultipleCityWeatherInfo(any(), capture(captor))
         captor.value.onRequestSuccess(multipleCityWeather)
 
         assertFalse(multipleCityWeatherViewModel.progressBarLiveData.value!!)
-        assertFalse(multipleCityWeatherViewModel.weatherInfoLiveData.value?.size == 0)
+        assertFalse(multipleCityWeatherViewModel.weatherInfoLiveData.value?.size == 1)
 
     }
 

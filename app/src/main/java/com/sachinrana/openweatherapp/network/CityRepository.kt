@@ -10,7 +10,7 @@ import java.lang.reflect.Type
 
 open class CityRepository(private val context: Context) {
 
-    fun getCityList(): MutableList<City> {
+    open fun getCityList(): MutableList<City> {
         val listType: Type = object : TypeToken<MutableList<City>?>() {}.type
         val bufferedReader: BufferedReader =
             context.assets.open("indian_cities.json").bufferedReader()
