@@ -10,7 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class GetWeatherRepository(private val context: Context) {
+open class GetWeatherRepository(private val context: Context) {
 
     fun getMultipleCityWeatherInfo(
         cityIds: String,
